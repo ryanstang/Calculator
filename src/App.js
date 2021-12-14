@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { useState } from 'react';
+import '@fontsource/roboto';
+import Header from './components/Header';
+import Output from './components/Output';
+import Input from './components/Input';
 
 function App() {
+  const [calc, setCalc] = useState(
+    [
+      [7,4,1,0],
+      [8,5,2,'.'],
+      [9,6,3,'x10'],
+      ['del', 'x', '+','Ans'],
+      ['AC', '/', '-', '='],
+    ]
+  )
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Header />
+       <Output />
+       <Input calcInfo={calc}/>
     </div>
-  );
+  )
 }
+
+
 
 export default App;
