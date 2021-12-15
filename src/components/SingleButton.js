@@ -1,9 +1,9 @@
 import { Button } from "@material-ui/core"
 
-const SingleButton = ({func}) => {
+const SingleButton = ({func, makeCalculation}) => {
     return (
-        <div style={{'padding-top': '5%', 'padding-bottom': '5%'}}>
-            <Button variant='contained' color='primary' fullWidth >{func}</Button>
+        <div style={{paddingTop: '5%', paddingBottom: '5%'}}>
+            <Button variant='contained' color='primary' fullWidth onClick={() => makeCalculation(func)}>{func}</Button>
         </div>
     )
 }

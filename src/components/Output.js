@@ -1,9 +1,9 @@
-import { TextField } from "@mui/material";
 
-const Output = () => {
+
+const Output = ({calculation}) => {
     return (
         <div>
-            <p className='outputRoundCorner'></p>
+            <p className='outputRoundCorner'>{calculation}</p>
         </div>
     )
 }

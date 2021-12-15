@@ -1,12 +1,12 @@
-import { Grid, Paper, Box } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import SingleButton from "./SingleButton";
 
-const Input = ({ calcInfo }) => {
+const Input = ({ calcInfo, makeCalculation }) => {
   const generateColumn = (column) => {
     return (
       <Grid item xs key={column}>
         {column.map((e) => {
-          return <SingleButton func={e} key={e} />;
+          return <SingleButton func={e} key={e} makeCalculation={makeCalculation}/>;
         })}
       </Grid>
     );
